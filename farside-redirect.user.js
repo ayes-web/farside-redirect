@@ -3,6 +3,7 @@
 // @namespace   https://github.com/ayes-web
 // @match       http*://youtu.be/*
 // @match       http*://*.youtube.com/*
+// @match       http*://*.youtube-nocookie.com/*
 // @match       http*://*.reddit.com/*
 // @match       http*://*.instagram.com/*
 // @match       http*://*.twitter.com/*
@@ -92,6 +93,7 @@ switch (host) {
     case "youtu.be":
     case "youtube.com":
     case "www.youtube.com":
+    case "www.youtube-nocookie.com":
         if (redirectYoutube) {
             window.location.replace(`${farsideEndpoint}${preferredYoutubeFrontend}/${path}`);
         }
